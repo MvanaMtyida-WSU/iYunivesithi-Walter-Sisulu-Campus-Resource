@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Resources | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div>Join us and be a part of the success</div>
+            <div class="contact-info">
+                <span>Call Us: +27 (0) 43 708 5200</span>
+                <span>Email: support@campus.ac.za</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="brand-header">
+        <div class="brand-container">
+            <div class="logo">Campus <span>Resources Hub</span></div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menuToggle">Menu &#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="resources.html">Resources & Timetable</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div class="form-card">
+            <form id="contactForm" action="https://formspree.io/f/xwlpqkle" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Student Email *</label>
+                    <input type="email" id="email" name="Student Email" placeholder="student@mywsu.ac.za" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Inquiry Type</label>
+                    <select id="subject" name="Inquiry Type">
+                        <option value="General Resource Inquiry">General Resource Inquiry</option>
+                        <option value="Computer Lab Support">Computer Lab Support</option>
+                        <option value="Study Room Reservation">Study Room Reservation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="Message" rows="5" placeholder="How can we assist you?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Submit Inquir</button>
+                <div id="formFeedback" class="form-status"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Resource Hub | CLI15W2B Group Project</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

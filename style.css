@@ -1,0 +1,415 @@
+/* General Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 1. Top Utility Header */
+.top-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+    color: #f8f9fa;
+    padding: 8px 0;
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info span {
+    margin-right: 20px;
+}
+
+/* Main Brand Header */
+.brand-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+
+.brand-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0b3c5d;
+}
+
+.logo span {
+    color: #0056b3;
+}
+
+/* 2. Primary Navigation Bar */
+.main-nav {
+    background-color: #0b3c5d;
+    position: relative;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    color: #ffffff;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active,
+.nav-links li a:focus {
+    background-color: #0056b3;
+    outline: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* 3. Hero Section (Image Background with Overlay) */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('../images/university campus.jpeg') no-repeat center center/cover;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    padding: 60px 20px 100px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0b3c5d;
+}
+
+/* 4. Floating Feature Banners (Overlay on Hero) */
+.feature-banners {
+    max-width: 1200px;
+    margin: -50px auto 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.banner-item {
+    background-color: rgba(11, 60, 93, 0.9);
+    color: #ffffff;
+    padding: 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.banner-item:last-child {
+    border-right: none;
+}
+
+.banner-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.banner-item a {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.banner-item a:hover {
+    text-decoration: underline;
+}
+
+/* 5. Main Content Layout & Cards */
+.main-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #0b3c5d;
+    margin-bottom: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #0b3c5d;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+/* Timetable Table Layout */
+.table-container {
+    overflow-x: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #0b3c5d;
+    color: #ffffff;
+}
+
+/* Interactive Image Slider */
+.slider-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.slider-wrapper img {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.slider-controls {
+    margin-top: 15px;
+}
+
+/* FAQ Accordion */
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-btn {
+    width: 100%;
+    background-color: #0b3c5d;
+    color: #ffffff;
+    text-align: left;
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.faq-content {
+    display: none;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+/* Form Layout */
+.form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #072235;
+    color: #ffffff;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0b3c5d;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .feature-banners {
+        margin-top: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .banner-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
